@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+env/
+venv/
+ENV/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+output/
+models/
+*.pkl
+*.pth
+.ipynb_checkpoints
+*.log
