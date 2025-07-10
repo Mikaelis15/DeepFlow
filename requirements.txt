@@ -1,0 +1,10 @@
+numpy
+pandas
+matplotlib
+scikit-learn
+torch
+umap-learn
+joblib
+PyQt6
+pyqt6-tools
+scipy
