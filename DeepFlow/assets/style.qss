@@ -31,7 +31,7 @@ QLabel {
 #ResultValueLabel {
     font-size: 32px;
     font-weight: bold;
-    color: #F0F0F0; /* Changed to lighter color */
+    color: #F0F0F0;
 }
 
 #StatusLabel {
