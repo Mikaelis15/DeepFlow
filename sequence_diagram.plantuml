@@ -1,0 +1,47 @@
+@startuml BloodCountSimplified
+
+actor User
+participant LoginWindow
+participant MainWindow
+participant IDECWorker
+participant VaDEWorker
+participant "Data Files"
+participant "AI Models"
+
+== Authentication ==
+User -> LoginWindow: login
+LoginWindow -> MainWindow: create main window
+destroy LoginWindow
+
+== IDEC Analysis ==
+User -> MainWindow: select CSV 
+User -> MainWindow: atart analysis 
+MainWindow -> IDECWorker: run IDEC pipeline
+activate IDECWorker
+
+IDECWorker -> "Data Files": load CSV data
+IDECWorker -> "AI Models": load IDEC & AutoEncoder
+IDECWorker -> IDECWorker: perform clustering
+IDECWorker -> MainWindow: return results (RBC/PLT counts + plot)
+deactivate IDECWorker
+
+MainWindow -> User: display IDEC results
+
+== VaDE Analysis ==
+User -> MainWindow: start VaDE clustering
+MainWindow -> VaDEWorker: run VaDE pipeline
+activate VaDEWorker
+
+VaDEWorker -> "Data Files": load RBC classified data
+VaDEWorker -> "AI Models": load VaDE model
+VaDEWorker -> VaDEWorker: perform RBC subtype clustering
+VaDEWorker -> MainWindow: return (single RBC/oincidence/reticulocyte + plot)
+deactivate VaDEWorker
+
+MainWindow -> User: display VaDE results
+
+== Application Close ==
+User -> MainWindow: close application
+MainWindow -> MainWindow: cleanup & shutdown
+
+@enduml
