@@ -1,0 +1,196 @@
+QMainWindow, QDialog {
+    background-color: #1A1A2E;
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+}
+
+QLabel {
+    color: #E0E0E0;
+}
+
+#TitleLabel {
+    font-size: 24px;
+    font-weight: 300;
+    color: #F0F0F0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #E63946;
+}
+
+#HeaderLabel {
+    font-size: 20px;
+    font-weight: bold;
+    color: #F0F0F0;
+}
+
+#ResultTitleLabel {
+    font-size: 14px;
+    color: #BDBDBD;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#ResultValueLabel {
+    font-size: 32px;
+    font-weight: bold;
+    color: #F0F0F0; /* Changed to lighter color */
+}
+
+#StatusLabel {
+    color: #A8DADC;
+    font-size: 13px;
+    font-style: italic;
+}
+
+#ErrorLabel {
+    color: #FF6B6B;
+    font-size: 13px;
+}
+
+QLineEdit {
+    background-color: #2C2C4E;
+    border: 1px solid #5A5A8D;
+    border-radius: 8px;
+    padding: 10px;
+    color: #E0E0E0;
+    font-size: 14px;
+}
+
+QLineEdit:focus {
+    border: 1px solid #A8DADC;
+    background-color: #3B3B6B;
+}
+
+QPushButton {
+    min-width: 150px;
+    height: 50px;
+    background-color: #5A5A8D;
+    color: #E0E0E0;
+    border: none;
+    font-size: 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+QPushButton:hover {
+    background-color: #E63946;
+}
+
+QPushButton:pressed {
+    background-color: #4A4A7A;
+}
+
+QPushButton:disabled {
+    background-color: #3A3A5A;
+    color: #7A7A9A;
+    cursor: default;
+}
+
+QPushButton[text="START BLOODCOUNT"] {
+    background-color: #8B0000;
+    color: #FFFFFF;
+}
+QPushButton[text="START BLOODCOUNT"]:hover {
+    background-color: #E63946;
+}
+QPushButton[text="START BLOODCOUNT"]:pressed {
+    background-color: #6A0000;
+}
+QPushButton[text="START BLOODCOUNT"]:disabled {
+    background-color: #4A0000;
+    color: #B0B0B0;
+}
+
+QPushButton[text="START VADE CLUSTERING"] {
+    background-color: #6A0DAD;
+    color: #FFFFFF;
+}
+QPushButton[text="START VADE CLUSTERING"]:hover {
+    background-color: #E63946;
+}
+QPushButton[text="START VADE CLUSTERING"]:pressed {
+    background-color: #520B8C;
+}
+QPushButton[text="START VADE CLUSTERING"]:disabled {
+    background-color: #3E086B;
+    color: #B0B0B0;
+}
+
+QPushButton[text="OPEN IDEC RESULTS"] {
+    background-color: #FFB300;
+    color: #1A1A2E;
+}
+QPushButton[text="OPEN IDEC RESULTS"]:hover {
+    background-color: #E63946;
+}
+QPushButton[text="OPEN IDEC RESULTS"]:pressed {
+    background-color: #E69A00;
+}
+
+QPushButton[text="CLOSE APPLICATION"] {
+    background-color: #6C757D;
+    color: #E0E6F0;
+    border-radius: 8px;
+    font-size: 16px;
+    padding: 12px 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+QPushButton[text="CLOSE APPLICATION"]:hover {
+    background-color: #E63946;
+}
+QPushButton[text="CLOSE APPLICATION"]:pressed {
+    background-color: #494F54;
+}
+
+#DragDropLabel {
+    border: 2px dashed #5A5A8D;
+    border-radius: 10px;
+    background-color: #2C2C4E;
+    color: #7A7A9A;
+    font-size: 14px;
+}
+
+#DragDropLabel:hover {
+    border-color: #E63946;
+    color: #E63946;
+}
+
+QFrame#SidePanel {
+    background-color: #2C2C4E;
+    border-radius: 10px;
+}
+
+QFrame#ResultsPanel {
+    background-color: transparent;
+}
+
+#ResultCard {
+    background-color: #2C2C4E;
+    border: 1px solid #5A5A8D;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+#PlotLabel {
+    background-color: #2C2C4E;
+    border: 1px solid #5A5A8D;
+    border-radius: 10px;
+    color: #BDBDBD;
+}
+
+#LoginLabel {
+    font-size: 28px;
+    font-weight: bold;
+    color: #E63946;
+}
+
+#LoginButton {
+    background-color: #A8DADC;
+    color: #1A1A2E;
+}
+#LoginButton:hover {
+    background-color: #E63946;
+}
+#LoginButton:pressed {
+    background-color: #8BB6B9;
+}
