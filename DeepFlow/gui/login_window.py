@@ -38,7 +38,7 @@ class LoginWindow(QDialog):
         self.password_input.setEchoMode(QLineEdit.EchoMode.Password)
         self.password_input.setFixedHeight(45)
 
-        self.login_button = QPushButton("Secure Log In")
+        self.login_button = QPushButton("Log In")
         self.login_button.clicked.connect(self.handle_login)
         self.login_button.setFixedHeight(50)
 
@@ -67,7 +67,7 @@ class LoginWindow(QDialog):
 
     def load_stylesheet(self):
         try:
-            with open("gui/style.qss", "r") as f:
+            with open("assets/style.qss", "r") as f:
                 self.setStyleSheet(f.read())
         except FileNotFoundError:
             print("Stylesheet 'gui/style.qss' not found.")
