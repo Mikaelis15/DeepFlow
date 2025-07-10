@@ -214,7 +214,7 @@ class MainWindow(QMainWindow):
         self.vade_worker.status_update.connect(self.update_status_message)
         self.vade_worker.finished.connect(self.on_vade_finished)
         self.vade_worker.error.connect(self.on_analysis_error)
-        self.vade_worker.plot_generated.connect(self.on_vade_plot_generated) # Connect new signal
+        self.vade_worker.plot_generated.connect(self.on_vade_plot_generated)
 
         self.vade_thread.started.connect(self.vade_worker.run)
         self.vade_thread.start()
@@ -295,7 +295,7 @@ class MainWindow(QMainWindow):
     def on_vade_plot_generated(self, plot_path, error_message):
         if error_message:
             self.plot_label.setText(f"VaDE Plot Error: {error_message}")
-            self.plot_area_stack.setCurrentIndex(0) # Show placeholder or error message
+            self.plot_area_stack.setCurrentIndex(0) 
         else:
             pixmap = QPixmap(plot_path)
             if not pixmap.isNull():
@@ -306,10 +306,10 @@ class MainWindow(QMainWindow):
                         Qt.TransformationMode.SmoothTransformation,
                     )
                 )
-                self.plot_area_stack.setCurrentIndex(2) # Show plot
+                self.plot_area_stack.setCurrentIndex(2)
             else:
                 self.plot_label.setText("VaDE plot image not found or invalid.")
-                self.plot_area_stack.setCurrentIndex(0) # Show placeholder
+                self.plot_area_stack.setCurrentIndex(0)
 
     def on_analysis_error(self, error_msg):
         self.loading_spinner.stop_animation()
